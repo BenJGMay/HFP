@@ -21,6 +21,7 @@ def do_search() -> 'html':
     letters = request.form['letters']
     title = 'Here are your results:'
     results = str(search4letters(phrase, letters))
+
     @copy_current_request_context
     def log_request(req: 'flask_request', res: str) -> None:
         """Log details of the web request and the results."""
